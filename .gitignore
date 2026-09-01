@@ -1,0 +1,13 @@
+secrets.cfg
+*.local.cfg
+.env
+.env.*
+!.env.example
+
+cache/
+logs/
+txData/
+
+resources/**/.git/
+resources/**/node_modules/
+resources/**/coverage/
