@@ -78,8 +78,19 @@ Copy the example file without committing the copy:
 Copy-Item .\secrets.cfg.example .\secrets.cfg
 ```
 
-Open `secrets.cfg` and replace the placeholder with the server registration
-key created in the Cfx.re Portal. Keep this file private. It is ignored by Git.
+Open `secrets.cfg` and replace the placeholders with the server registration
+key created in the Cfx.re Portal and the private Neon URL used by Account and
+Character. Keep this file private. It is ignored by Git.
+
+Use the server-only convar names shown in the example:
+
+```text
+set sv_licenseKey "your-cfx-license-key"
+set veltma_database_url "postgresql://your-user:your-password@your-neon-host/your-database?sslmode=require"
+```
+
+Do not use `setr` or `sets` for `veltma_database_url`; it must not be
+replicated to clients or exposed in server-list information.
 
 ### 3. Install the basic FiveM resources
 
@@ -98,9 +109,15 @@ At minimum the folder must contain these resources before starting:
 ```text
 resources/mapmanager
 resources/spawnmanager
-resources/basic-gamemode
-resources/[maps]/fivem-map-hipster
+resources/chat
+resources/[veltma]/veltma-gametype
+resources/[veltma]/veltma-map
 ```
+
+The Veltma gametype and map initialize `mapmanager` without enabling automatic
+spawning. Keep the default `basic-gamemode` and `fivem-map-hipster` resources
+disabled because that gamemode calls `spawnmanager:setAutoSpawn(true)` and
+`spawnmanager:forceRespawn()`, bypassing the Account, Character, and Spawn gates.
 
 Do not copy the template’s `server.cfg` over this repository’s `server.cfg`.
 
@@ -164,21 +181,19 @@ of `127.0.0.1` and allow TCP/UDP port `30120` through the host firewall.
 The first successful join should show:
 
 1. the Veltma loading screen while resources load;
-2. a connected player in the normal GTA V world;
-3. Veltma World’s controlled low-population behavior;
-4. no Account UI yet.
-
-This is the server foundation milestone. Live testing of Account and other
-Veltma scripts comes later after their required services are configured.
+2. the Account login or signup UI;
+3. Character selection after authentication;
+4. Spawn selection after choosing a character;
+5. the playable GTA V world after the server authorizes the selected spawn.
 
 ## Configuration files
 
-| File | Tracked | Purpose |
-| --- | --- | --- |
-| `server.cfg` | Yes | Endpoints, server identity, resource start order |
-| `permissions.cfg` | Yes | Non-secret ACE defaults |
-| `secrets.cfg.example` | Yes | Placeholder for the local Cfx.re key |
-| `secrets.cfg` | No | Local Cfx.re key loaded by `server.cfg` |
+| File                  | Tracked | Purpose                                                 |
+| --------------------- | ------- | ------------------------------------------------------- |
+| `server.cfg`          | Yes     | Endpoints, server identity, resource start order        |
+| `permissions.cfg`     | Yes     | Non-secret ACE defaults                                 |
+| `secrets.cfg.example` | Yes     | Placeholders for local Cfx.re and Veltma server secrets |
+| `secrets.cfg`         | No      | Local secrets loaded by `server.cfg`                    |
 
 Never place a Cfx.re key, database URL, Account API shared secret, password,
 token, or provider key in `server.cfg`, a resource client file, a replicated
@@ -219,5 +234,7 @@ then use txAdmin’s resource console to restart `veltma-core`,
 
 That is expected only when a database URL has been configured but PostgreSQL is
 unreachable. The initial join path leaves `DATABASE_URL` unset, so Core remains
-usable with an unconfigured database. Do not put the database URL into a client
-resource or `server.cfg`.
+usable with an unconfigured database. Character requires either the process
+environment or the server-only `veltma_database_url` convar in `secrets.cfg`.
+Do not put the database URL into a client resource, use `setr`/`sets`, or
+commit `secrets.cfg`.

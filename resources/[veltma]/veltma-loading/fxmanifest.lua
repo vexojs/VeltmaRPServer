@@ -9,6 +9,7 @@ dependency 'veltma-core'
 
 loadscreen 'dist/ui/index.html'
 loadscreen_cursor 'yes'
+loadscreen_manual_shutdown 'yes'
 
 files {
     'dist/ui/index.html',

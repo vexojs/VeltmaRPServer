@@ -1,0 +1,30 @@
+{
+  "name": "veltma-world",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Controlled empty-world baseline for Veltma RP",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@10.28.1",
+  "scripts": {
+    "typecheck": "tsc --build",
+    "build": "node scripts/build.mjs --mode=production",
+    "build:dev": "node scripts/build.mjs --mode=development",
+    "build:watch": "node scripts/build.mjs --mode=development --watch",
+    "test": "vitest run --passWithNoTests --pool=threads --poolOptions.threads.singleThread",
+    "lint": "eslint src scripts eslint.config.js"
+  },
+  "dependencies": {
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^26.4.0",
+    "esbuild": "^0.27.0",
+    "eslint": "^9.39.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.69.0",
+    "vitest": "^3.2.4"
+  }
+}
