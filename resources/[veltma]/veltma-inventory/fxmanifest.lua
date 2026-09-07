@@ -8,6 +8,7 @@ version '0.1.0'
 
 dependencies {
   'veltma-core',
+  'veltma-account',
   'veltma-character',
   'veltma-items',
   '/onesync'
