@@ -1,0 +1,29 @@
+[
+  {
+    "id": "pillbox",
+    "label": "Pillbox Medical Center",
+    "x": 298.64,
+    "y": -584.56,
+    "z": 43.26,
+    "heading": 70,
+    "enabled": true
+  },
+  {
+    "id": "sandy-shores",
+    "label": "Sandy Shores Medical Center",
+    "x": 1839.53,
+    "y": 3672.84,
+    "z": 34.28,
+    "heading": 210,
+    "enabled": true
+  },
+  {
+    "id": "paleto-bay",
+    "label": "Paleto Bay Medical Center",
+    "x": -247.76,
+    "y": 6331.23,
+    "z": 32.43,
+    "heading": 225,
+    "enabled": true
+  }
+]
