@@ -8,6 +8,7 @@ version '0.1.0'
 
 dependency 'veltma-core'
 dependency 'veltma-character'
+dependency 'veltma-clothing'
 dependency 'spawnmanager'
 
 server_script 'dist/server/index.js'

@@ -12,5 +12,6 @@ server_script 'dist/server/index.js'
 
 files {
   'config/items.json',
+  'config/clothing.json',
   'web/items/*'
 }
