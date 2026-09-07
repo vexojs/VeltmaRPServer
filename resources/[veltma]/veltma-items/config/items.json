@@ -1,0 +1,263 @@
+[
+  {
+    "id": "water",
+    "label": "Water Bottle",
+    "description": "A sealed bottle of drinking water.",
+    "category": "drink",
+    "weight": 500,
+    "stackable": true,
+    "maxStack": 12,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": false,
+    "image": null,
+    "metadataSchema": { "version": 1, "fields": {} }
+  },
+  {
+    "id": "sandwich",
+    "label": "Sandwich",
+    "description": "A wrapped sandwich ready to eat.",
+    "category": "food",
+    "weight": 250,
+    "stackable": true,
+    "maxStack": 12,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": false,
+    "image": null,
+    "metadataSchema": { "version": 1, "fields": {} }
+  },
+  {
+    "id": "snack",
+    "label": "Snack",
+    "description": "A small packaged snack.",
+    "category": "food",
+    "weight": 100,
+    "stackable": true,
+    "maxStack": 20,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": false,
+    "image": null,
+    "metadataSchema": { "version": 1, "fields": {} }
+  },
+  {
+    "id": "phone_basic",
+    "label": "Basic Phone",
+    "description": "A basic mobile phone with room for one SIM card.",
+    "category": "phone",
+    "weight": 220,
+    "stackable": false,
+    "maxStack": 1,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": true,
+    "image": null,
+    "metadataSchema": {
+      "version": 1,
+      "fields": {
+        "deviceId": {
+          "type": "string",
+          "required": true,
+          "minLength": 36,
+          "maxLength": 36,
+          "format": "uuid"
+        },
+        "model": {
+          "type": "string",
+          "required": true,
+          "minLength": 1,
+          "maxLength": 48,
+          "format": "identifier"
+        }
+      }
+    }
+  },
+  {
+    "id": "sim_card",
+    "label": "SIM Card",
+    "description": "A network SIM card with a unique phone number.",
+    "category": "sim",
+    "weight": 5,
+    "stackable": false,
+    "maxStack": 1,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": true,
+    "image": null,
+    "metadataSchema": {
+      "version": 1,
+      "fields": {
+        "simId": {
+          "type": "string",
+          "required": true,
+          "minLength": 36,
+          "maxLength": 36,
+          "format": "uuid"
+        },
+        "phoneNumber": {
+          "type": "string",
+          "required": true,
+          "minLength": 5,
+          "maxLength": 20,
+          "format": "phone_number"
+        },
+        "carrier": {
+          "type": "string",
+          "required": true,
+          "minLength": 2,
+          "maxLength": 48,
+          "format": "identifier"
+        }
+      }
+    }
+  },
+  {
+    "id": "backpack_lv1",
+    "label": "Backpack LV1",
+    "description": "A compact entry-level backpack.",
+    "category": "backpack",
+    "weight": 700,
+    "stackable": false,
+    "maxStack": 1,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": true,
+    "image": null,
+    "metadataSchema": { "version": 1, "fields": {} }
+  },
+  {
+    "id": "backpack_lv2",
+    "label": "Backpack LV2",
+    "description": "A lightweight everyday backpack.",
+    "category": "backpack",
+    "weight": 900,
+    "stackable": false,
+    "maxStack": 1,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": true,
+    "image": null,
+    "metadataSchema": { "version": 1, "fields": {} }
+  },
+  {
+    "id": "backpack_lv3",
+    "label": "Backpack LV3",
+    "description": "A durable medium-capacity backpack.",
+    "category": "backpack",
+    "weight": 1150,
+    "stackable": false,
+    "maxStack": 1,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": true,
+    "image": null,
+    "metadataSchema": { "version": 1, "fields": {} }
+  },
+  {
+    "id": "backpack_lv4",
+    "label": "Backpack LV4",
+    "description": "A large reinforced backpack.",
+    "category": "backpack",
+    "weight": 1450,
+    "stackable": false,
+    "maxStack": 1,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": true,
+    "image": null,
+    "metadataSchema": { "version": 1, "fields": {} }
+  },
+  {
+    "id": "backpack_lv5",
+    "label": "Backpack LV5",
+    "description": "A premium high-capacity backpack.",
+    "category": "backpack",
+    "weight": 1750,
+    "stackable": false,
+    "maxStack": 1,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": true,
+    "image": null,
+    "metadataSchema": { "version": 1, "fields": {} }
+  },
+  {
+    "id": "backpack_lv6",
+    "label": "Backpack LV6",
+    "description": "An elite maximum-capacity backpack.",
+    "category": "backpack",
+    "weight": 2100,
+    "stackable": false,
+    "maxStack": 1,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": true,
+    "image": null,
+    "metadataSchema": { "version": 1, "fields": {} }
+  },
+  {
+    "id": "pistol",
+    "label": "Pistol",
+    "description": "A serialized semi-automatic pistol.",
+    "category": "weapon",
+    "weight": 950,
+    "stackable": false,
+    "maxStack": 1,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": true,
+    "image": null,
+    "metadataSchema": {
+      "version": 1,
+      "fields": {
+        "serialNumber": {
+          "type": "string",
+          "required": true,
+          "minLength": 3,
+          "maxLength": 64,
+          "format": "serial_number"
+        },
+        "condition": {
+          "type": "integer",
+          "required": true,
+          "minimum": 0,
+          "maximum": 100
+        },
+        "attachments": {
+          "type": "string_array",
+          "required": false,
+          "maxItems": 16,
+          "itemMaxLength": 64
+        }
+      }
+    }
+  },
+  {
+    "id": "pistol_ammo",
+    "label": "Pistol Ammo",
+    "description": "A box of pistol ammunition.",
+    "category": "ammo",
+    "weight": 300,
+    "stackable": true,
+    "maxStack": 10,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": false,
+    "image": null,
+    "metadataSchema": { "version": 1, "fields": {} }
+  }
+]
