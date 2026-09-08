@@ -259,5 +259,58 @@
     "uniqueInstance": false,
     "image": "web/items/pistol-ammo.png",
     "metadataSchema": { "version": 1, "fields": {} }
+  },
+  {
+    "id": "carbine_rifle",
+    "label": "Carbine Rifle",
+    "description": "A serialized select-fire carbine rifle.",
+    "category": "weapon",
+    "weight": 3000,
+    "stackable": false,
+    "maxStack": 1,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": true,
+    "image": "web/items/carbine-rifle.png",
+    "metadataSchema": {
+      "version": 1,
+      "fields": {
+        "serialNumber": {
+          "type": "string",
+          "required": true,
+          "minLength": 3,
+          "maxLength": 64,
+          "format": "serial_number"
+        },
+        "condition": {
+          "type": "integer",
+          "required": true,
+          "minimum": 0,
+          "maximum": 100
+        },
+        "attachments": {
+          "type": "string_array",
+          "required": false,
+          "maxItems": 16,
+          "itemMaxLength": 64
+        }
+      }
+    }
+  },
+  {
+    "id": "carbine_rifle_ammo",
+    "label": "Carbine Rifle Ammo",
+    "description": "Individual rifle rounds compatible with the Carbine Rifle.",
+    "category": "ammo",
+    "weight": 14,
+    "stackable": true,
+    "maxStack": 250,
+    "usable": true,
+    "droppable": true,
+    "tradable": true,
+    "uniqueInstance": false,
+    "image": "web/items/carbine-rifle-ammo.png",
+    "metadataSchema": { "version": 1, "fields": {} }
   }
 ]
