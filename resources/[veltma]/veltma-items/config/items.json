@@ -11,7 +11,7 @@
     "droppable": true,
     "tradable": true,
     "uniqueInstance": false,
-    "image": null,
+    "image": "web/items/water.png",
     "metadataSchema": { "version": 1, "fields": {} }
   },
   {
@@ -219,7 +219,7 @@
     "droppable": true,
     "tradable": true,
     "uniqueInstance": true,
-    "image": null,
+    "image": "web/items/pistol.png",
     "metadataSchema": {
       "version": 1,
       "fields": {
@@ -257,7 +257,7 @@
     "droppable": true,
     "tradable": true,
     "uniqueInstance": false,
-    "image": null,
+    "image": "web/items/pistol-ammo.png",
     "metadataSchema": { "version": 1, "fields": {} }
   }
 ]
