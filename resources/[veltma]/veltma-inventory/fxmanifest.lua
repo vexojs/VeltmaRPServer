@@ -11,6 +11,8 @@ dependencies {
   'veltma-account',
   'veltma-character',
   'veltma-items',
+  'veltma-hud',
+  'veltma-interaction',
   '/onesync'
 }
 
