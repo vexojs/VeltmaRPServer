@@ -20,11 +20,6 @@ client_script 'dist/client/index.js'
 files {
   'stream/*.ydd',
   'stream/*.ytd',
-  'stream/*.ymt',
   'stream/**/*.ydd',
-  'stream/**/*.ytd',
-  'stream/**/*.ymt'
+  'stream/**/*.ytd'
 }
-
-data_file 'SHOP_PED_APPAREL_META_FILE' 'stream/*.ymt'
-data_file 'SHOP_PED_APPAREL_META_FILE' 'stream/**/*.ymt'
