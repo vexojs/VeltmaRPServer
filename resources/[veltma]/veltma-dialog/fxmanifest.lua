@@ -3,13 +3,10 @@ game 'gta5'
 node_version '22'
 
 author 'Veltma Studios'
-description 'Reusable Veltma HUD prompts, hints, and notifications'
+description 'Reusable typed dialogs for Veltma gameplay resources'
 version '0.1.0'
 
-dependencies {
-  'veltma-core',
-  'veltma-account'
-}
+dependency 'veltma-core'
 
 client_script 'dist/client/index.js'
 server_script 'dist/server/index.js'
@@ -20,3 +17,4 @@ files {
   'dist/web/index.html',
   'dist/web/assets/*'
 }
+
